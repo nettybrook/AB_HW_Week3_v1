@@ -14,6 +14,7 @@
 		948E36A91D0306A2003E55A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948E36A71D0306A2003E55A6 /* LaunchScreen.storyboard */; };
 		948E36B41D0306A2003E55A6 /* AB_HW_Week3_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E36B31D0306A2003E55A6 /* AB_HW_Week3_v1Tests.swift */; };
 		948E36BF1D0306A2003E55A6 /* AB_HW_Week3_v1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E36BE1D0306A2003E55A6 /* AB_HW_Week3_v1UITests.swift */; };
+		948E36CD1D030A7F003E55A6 /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E36CC1D030A7F003E55A6 /* MailboxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		948E36BA1D0306A2003E55A6 /* AB_HW_Week3_v1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AB_HW_Week3_v1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		948E36BE1D0306A2003E55A6 /* AB_HW_Week3_v1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AB_HW_Week3_v1UITests.swift; sourceTree = "<group>"; };
 		948E36C01D0306A2003E55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948E36CC1D030A7F003E55A6 /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		948E369D1D0306A2003E55A6 /* AB_HW_Week3_v1 */ = {
 			isa = PBXGroup;
 			children = (
+				948E36CE1D030A97003E55A6 /* My View controllers */,
 				948E369E1D0306A2003E55A6 /* AppDelegate.swift */,
 				948E36A01D0306A2003E55A6 /* ViewController.swift */,
 				948E36A21D0306A2003E55A6 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				948E36C01D0306A2003E55A6 /* Info.plist */,
 			);
 			path = AB_HW_Week3_v1UITests;
+			sourceTree = "<group>";
+		};
+		948E36CE1D030A97003E55A6 /* My View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				948E36CC1D030A7F003E55A6 /* MailboxViewController.swift */,
+			);
+			name = "My View controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				948E36A11D0306A2003E55A6 /* ViewController.swift in Sources */,
 				948E369F1D0306A2003E55A6 /* AppDelegate.swift in Sources */,
+				948E36CD1D030A7F003E55A6 /* MailboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

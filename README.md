@@ -38,7 +38,10 @@ Time spent: 30 hours
 #### The following **additional** features are implemented:
 
 - [x] List anything else that you can get done to improve the app functionality!
+- Clicking the cancel on the compose link - brings you back to the mail box
+- After the message is removed from the list - the scrollView moves up.
 - When you get the the MENU after panning - you can navigate to the Reschedule or Lists View Controller and you can dismiss the view form there.
+- Added segmented controller (visual only)
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 

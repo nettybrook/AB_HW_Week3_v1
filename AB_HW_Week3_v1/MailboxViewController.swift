@@ -319,11 +319,25 @@ class MailboxViewController: UIViewController {
         //look for measure of movement
         let translation = sender.translationInView(view)
         
-        if sender.state == .Recognized {
-                print("Screen edge swiped!")
+        
+        if sender.state == UIGestureRecognizerState.Began {
+        
+            print("Screen edge swiped!")
             
-            panningView.frame.origin.x += translation.x
+            self.panOriginalCenter = self.panningView.center
             
+        }
+        
+        if sender.state == UIGestureRecognizerState.Changed {
+        
+        self.panningView.center = CGPoint(x: panOriginalCenter.x + translation.x, y: panOriginalCenter.y)
+            
+        }
+        
+        if sender.state == UIGestureRecognizerState.Ended {
+            
+        self.panningView.frame.origin.x = -20
+        
         }
     }
     

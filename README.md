@@ -2,7 +2,7 @@
 
 The purpose of this homework is to leverage animations and gestures to implement more sophisticated interactions. We're going to use the techniques from this week to implement the Mailbox interactions.
 
-Time spent: 24 hours
+Time spent: 30 hours
 
 ### Features
 
@@ -30,18 +30,20 @@ Time spent: 24 hours
 
 - [x] Panning from the edge should reveal the menu.
   - [x] If the menu is being revealed when the user lifts their finger, it should continue revealing.
-  - [ ] If the menu is being hidden when the user lifts their finger, it should continue hiding.
+  - [x] If the menu is being hidden when the user lifts their finger, it should continue hiding.
 - [x] Tapping on compose should animate to reveal the compose view.
 - [ ] Tapping the segmented control in the title should swipe views in from the left or right.
 - [ ] Shake to undo.
 
 #### The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+- When you get the the MENU after panning - you can navigate to the Reschedule or Lists View Controller and you can dismiss the view form there.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. Screen Edge gesture
+1. Screen Edge gesture - I might still have questions because it seemed that the View is 20 points larger and left and right - I figured that out by looking at it x position.
+2. Shake gesture - is anyone has done it.
 
 ### Video Walkthrough 
 
@@ -56,4 +58,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-* Any libraries or borrowed content.
+As mentioned above - the Screen Edge gesture was rough because of the unpredictability in behavior due to the view beign 20 points large than expected (I couldn't understand why i was seeing extra white space).
+
+I had a large hump to get over to understand the gestures - but more than that - to undersand the positioning thresholds. I nested IF statements to make sure to get the "continue to swipe on gesture end" action to work.
+

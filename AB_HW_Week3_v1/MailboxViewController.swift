@@ -70,7 +70,7 @@ class MailboxViewController: UIViewController {
             
             self.messageOriginalCenter = self.messageImageView.center
             
-        // IF GESTURE changed
+            // IF GESTURE changed
         } else if sender.state == UIGestureRecognizerState.Changed {
             print ("Changed")
             
@@ -227,9 +227,9 @@ class MailboxViewController: UIViewController {
                         })
                     }
                 }
-               
+                
             } else {
-              
+                
                 // IF the message is past the 250 threshold - showing the delete icon - allow it to continue animating with...
                 if messageImageView.frame.origin.x > 250 {
                     print("released at 250")
@@ -264,12 +264,12 @@ class MailboxViewController: UIViewController {
                             self.messageImageView.frame.origin.x += 320
                             
                             }, completion: { (Bool) -> Void in
-                             
+                                
                                 //Pull the messages up
                                 self.singlemessageView.alpha = 0
                                 
                                 UIView.animateWithDuration(0.2, animations: { () -> Void in
-                                  self.feedImageView.frame.origin.y = (-86)
+                                    self.feedImageView.frame.origin.y = (-86)
                                 })
                                 
                                 
@@ -299,7 +299,7 @@ class MailboxViewController: UIViewController {
         
         // Pull the messages up
         UIView.animateWithDuration(0.2) { () -> Void in
-        self.feedImageView.frame.origin.y = (-86)
+            self.feedImageView.frame.origin.y = (-86)
         }
     }
     
@@ -322,7 +322,7 @@ class MailboxViewController: UIViewController {
         let velocity = sender.velocityInView(view)
         
         if sender.state == UIGestureRecognizerState.Began {
-        
+            
             print("Screen edge swiped!")
             
             self.panOriginalCenter = self.panningView.center
@@ -330,8 +330,8 @@ class MailboxViewController: UIViewController {
         }
         
         if sender.state == UIGestureRecognizerState.Changed {
-        
-        self.panningView.center = CGPoint(x: panOriginalCenter.x + translation.x, y: panOriginalCenter.y)
+            
+            self.panningView.center = CGPoint(x: panOriginalCenter.x + translation.x, y: panOriginalCenter.y)
             
         }
         
@@ -339,18 +339,37 @@ class MailboxViewController: UIViewController {
             
             // IF view is going to the right when released
             if velocity.x > 0 {
+                
+                // left side of panning view is over 100 threshold
                 if self.panningView.frame.origin.x > 100 {
                     
-                self.panningView.frame.origin.x = 360
-                
+                    UIView.animateWithDuration(0.5, animations: { () -> Void in
+                        
+                        self.panningView.frame.origin.x = 360
+                        
+                    })
+                    
+                    
+                } else {
+                    
+                    UIView.animateWithDuration(0.5, animations: { () -> Void in
+                        
+                        self.panningView.frame.origin.x = -20
+                        
+                    })
+                    
+                    
                 }
-      
+                
             } else {
                 
-                self.panningView.frame.origin.x = -20
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.panningView.frame.origin.x = -20
+                })
+                
                 
             }
-        
+            
         }
     }
     
@@ -365,47 +384,65 @@ class MailboxViewController: UIViewController {
         // Show all messages - bring it down
         UIView.animateWithDuration(0.2) { () -> Void in
             self.feedImageView.frame.origin.y = 0
-        
-    }
+            
+        }
     }
     
     @IBAction func onMailTap(sender: AnyObject) {
-    
-        self.panningView.frame.origin.x = -20
-    
+        
+        UIView.animateWithDuration(0.5) { () -> Void in
+            
+            self.panningView.frame.origin.x = -20
+        }
+        
     }
+    
+    @IBAction func onLaterTap(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("laterSegue", sender: self)
+        
+        
+    }
+    
+    @IBAction func onTapLists(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("listsSegue", sender: self)
+        
+    }
+    
+    
     @IBAction func onTapCompose(sender: AnyObject) {
-    
-    
+        
+        
     }
     
     
-//    @IBAction func segControlAction(sender: AnyObject) {
-//        
-//        if mailSegControl.selectedSegmentIndex == 0 {
-//        
-//            UIView.animateWithDuration(0.5, animations: { () -> Void in
-//                
-//                self.mailboxScrollView.frame.origin.x += 320
-//                
-//                }, completion: { (Bool) -> Void in
-//                    
-//                    UIView.animateWithDuration(0.5, animations: { () -> Void in
-//                        self.mailboxScrollView.frame.origin.x = 0
-//                    })
-//             
-//            })
-//        
-//        }
-//        
-//        if mailSegControl.selectedSegmentIndex == 1 {
-//            
-//        }
-//        
-//        if mailSegControl.selectedSegmentIndex == 2 {
-//            
-//        }
-//    }
+    //    @IBAction func segControlAction(sender: AnyObject) {
+    //
+    //        if mailSegControl.selectedSegmentIndex == 0 {
+    //
+    //            UIView.animateWithDuration(0.5, animations: { () -> Void in
+    //
+    //                self.mailboxScrollView.frame.origin.x += 320
+    //
+    //                }, completion: { (Bool) -> Void in
+    //
+    //                    UIView.animateWithDuration(0.5, animations: { () -> Void in
+    //                        self.mailboxScrollView.frame.origin.x = 0
+    //                    })
+    //
+    //            })
+    //
+    //        }
+    //
+    //        if mailSegControl.selectedSegmentIndex == 1 {
+    //
+    //        }
+    //
+    //        if mailSegControl.selectedSegmentIndex == 2 {
+    //
+    //        }
+    //    }
     /*
     // MARK: - Navigation
     

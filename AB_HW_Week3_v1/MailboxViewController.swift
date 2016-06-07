@@ -318,7 +318,8 @@ class MailboxViewController: UIViewController {
         
         //look for measure of movement
         let translation = sender.translationInView(view)
-        
+        //look for direction of movement
+        let velocity = sender.velocityInView(view)
         
         if sender.state == UIGestureRecognizerState.Began {
         
@@ -336,7 +337,19 @@ class MailboxViewController: UIViewController {
         
         if sender.state == UIGestureRecognizerState.Ended {
             
-        self.panningView.frame.origin.x = -20
+            // IF view is going to the right when released
+            if velocity.x > 0 {
+                if self.panningView.frame.origin.x > 100 {
+                    
+                self.panningView.frame.origin.x = 360
+                
+                }
+      
+            } else {
+                
+                self.panningView.frame.origin.x = -20
+                
+            }
         
         }
     }
@@ -356,6 +369,11 @@ class MailboxViewController: UIViewController {
     }
     }
     
+    @IBAction func onMailTap(sender: AnyObject) {
+    
+        self.panningView.frame.origin.x = -20
+    
+    }
     @IBAction func onTapCompose(sender: AnyObject) {
     
     

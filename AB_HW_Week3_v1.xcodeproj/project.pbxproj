@@ -105,7 +105,6 @@
 				948E369E1D0306A2003E55A6 /* AppDelegate.swift */,
 				948E36A01D0306A2003E55A6 /* ViewController.swift */,
 				948E36A21D0306A2003E55A6 /* Main.storyboard */,
-				94C1B3781D066A0D0017C74D /* NewMessageViewController.swift */,
 				948E36A51D0306A2003E55A6 /* Assets.xcassets */,
 				948E36A71D0306A2003E55A6 /* LaunchScreen.storyboard */,
 				948E36AA1D0306A2003E55A6 /* Info.plist */,
@@ -134,6 +133,7 @@
 		948E36CE1D030A97003E55A6 /* My View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				94C1B3781D066A0D0017C74D /* NewMessageViewController.swift */,
 				948E36CC1D030A7F003E55A6 /* MailboxViewController.swift */,
 			);
 			name = "My View controllers";

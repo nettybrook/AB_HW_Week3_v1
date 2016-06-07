@@ -17,6 +17,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bE9-JL-byI">
+                                <rect key="frame" x="0.0" y="67" width="183" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onMailTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePE-lt-6hG"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" id="deT-Iq-uo2">
                                 <rect key="frame" x="-20" y="-20" width="360" height="1400"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

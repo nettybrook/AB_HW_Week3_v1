@@ -48,7 +48,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 TBD - will post Mon Jun 6th
-<img src='http://imgur.com/ffO0qIO' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/nettybrook/AB_HW_Week3_v1/blob/edgepan/AB_HW_Week3_Anim.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

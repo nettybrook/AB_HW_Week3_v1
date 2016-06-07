@@ -15,6 +15,7 @@
 		948E36B41D0306A2003E55A6 /* AB_HW_Week3_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E36B31D0306A2003E55A6 /* AB_HW_Week3_v1Tests.swift */; };
 		948E36BF1D0306A2003E55A6 /* AB_HW_Week3_v1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E36BE1D0306A2003E55A6 /* AB_HW_Week3_v1UITests.swift */; };
 		948E36CD1D030A7F003E55A6 /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E36CC1D030A7F003E55A6 /* MailboxViewController.swift */; };
+		94C1B3791D066A0D0017C74D /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1B3781D066A0D0017C74D /* NewMessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		948E36BE1D0306A2003E55A6 /* AB_HW_Week3_v1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AB_HW_Week3_v1UITests.swift; sourceTree = "<group>"; };
 		948E36C01D0306A2003E55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948E36CC1D030A7F003E55A6 /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
+		94C1B3781D066A0D0017C74D /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				948E369E1D0306A2003E55A6 /* AppDelegate.swift */,
 				948E36A01D0306A2003E55A6 /* ViewController.swift */,
 				948E36A21D0306A2003E55A6 /* Main.storyboard */,
+				94C1B3781D066A0D0017C74D /* NewMessageViewController.swift */,
 				948E36A51D0306A2003E55A6 /* Assets.xcassets */,
 				948E36A71D0306A2003E55A6 /* LaunchScreen.storyboard */,
 				948E36AA1D0306A2003E55A6 /* Info.plist */,
@@ -270,6 +273,7 @@
 				948E36A11D0306A2003E55A6 /* ViewController.swift in Sources */,
 				948E369F1D0306A2003E55A6 /* AppDelegate.swift in Sources */,
 				948E36CD1D030A7F003E55A6 /* MailboxViewController.swift in Sources */,
+				94C1B3791D066A0D0017C74D /* NewMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +498,7 @@
 				948E36C51D0306A2003E55A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		948E36C61D0306A2003E55A6 /* Build configuration list for PBXNativeTarget "AB_HW_Week3_v1Tests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				948E36C81D0306A2003E55A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		948E36C91D0306A2003E55A6 /* Build configuration list for PBXNativeTarget "AB_HW_Week3_v1UITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +516,7 @@
 				948E36CB1D0306A2003E55A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

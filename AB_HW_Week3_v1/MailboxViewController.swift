@@ -10,6 +10,7 @@ import UIKit
 
 class MailboxViewController: UIViewController {
     
+    @IBOutlet weak var mailSegControl: UISegmentedControl!
     @IBOutlet weak var mailboxScrollView: UIScrollView!
     @IBOutlet weak var feedImageView: UIImageView!
     @IBOutlet weak var messageImageView: UIImageView!
@@ -23,6 +24,7 @@ class MailboxViewController: UIViewController {
     @IBOutlet weak var panningView: UIView!
     
     var messageOriginalCenter: CGPoint!
+    var panOriginalCenter: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,10 @@ class MailboxViewController: UIViewController {
         
         messageImageView.addGestureRecognizer(panGestureRecognizer)
         
-        //        let edgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "onEdgePan:")
+        let edgeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "onEdgePan:")
+        edgeGesture.edges = UIRectEdge.Left
+        panningView.addGestureRecognizer(edgeGesture)
+        
         
     }
     
@@ -87,7 +92,7 @@ class MailboxViewController: UIViewController {
                 laterImageFrame.origin.x = rightPosOfMessageView
                 
                 // Place the later/clock icon at that offset position
-                listiconImageFrame.origin.x = rightPosOfMessageView
+                listiconImageFrame.origin.x = rightPosOfMessageView + 20
                 
                 // Change color - yellow
                 self.singlemessageView.backgroundColor = UIColor(red:255/255, green: 204/255, blue: 0/255, alpha: 1.0)
@@ -309,10 +314,66 @@ class MailboxViewController: UIViewController {
         }
     }
     
-    //@IBAction func onEdgePan(sender: UIScreenEdgePanGestureRecognizer) {
+    func onEdgePan(sender: UIScreenEdgePanGestureRecognizer) {
+        
+        //look for measure of movement
+        let translation = sender.translationInView(view)
+        
+        if sender.state == .Recognized {
+                print("Screen edge swiped!")
+            
+            panningView.frame.origin.x += translation.x
+            
+        }
+    }
     
-    //}
+    @IBAction func onTapHelp(sender: AnyObject) {
+        
+        print("return to start")
+        
+        // Appear - message view
+        self.messageImageView.frame.origin.x = 0
+        self.singlemessageView.alpha = 1
+        
+        // Show all messages - bring it down
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.feedImageView.frame.origin.y = 0
+        
+    }
+    }
     
+    @IBAction func onTapCompose(sender: AnyObject) {
+    
+    
+    }
+    
+    
+//    @IBAction func segControlAction(sender: AnyObject) {
+//        
+//        if mailSegControl.selectedSegmentIndex == 0 {
+//        
+//            UIView.animateWithDuration(0.5, animations: { () -> Void in
+//                
+//                self.mailboxScrollView.frame.origin.x += 320
+//                
+//                }, completion: { (Bool) -> Void in
+//                    
+//                    UIView.animateWithDuration(0.5, animations: { () -> Void in
+//                        self.mailboxScrollView.frame.origin.x = 0
+//                    })
+//             
+//            })
+//        
+//        }
+//        
+//        if mailSegControl.selectedSegmentIndex == 1 {
+//            
+//        }
+//        
+//        if mailSegControl.selectedSegmentIndex == 2 {
+//            
+//        }
+//    }
     /*
     // MARK: - Navigation
     

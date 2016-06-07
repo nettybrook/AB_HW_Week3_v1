@@ -28,10 +28,10 @@ Time spent: 24 hours
 
 #### Optional
 
-- [ ] Panning from the edge should reveal the menu.
-  - [ ] If the menu is being revealed when the user lifts their finger, it should continue revealing.
+- [x] Panning from the edge should reveal the menu.
+  - [x] If the menu is being revealed when the user lifts their finger, it should continue revealing.
   - [ ] If the menu is being hidden when the user lifts their finger, it should continue hiding.
-- [ ] Tapping on compose should animate to reveal the compose view.
+- [x] Tapping on compose should animate to reveal the compose view.
 - [ ] Tapping the segmented control in the title should swipe views in from the left or right.
 - [ ] Shake to undo.
 

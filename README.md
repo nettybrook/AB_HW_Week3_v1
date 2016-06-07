@@ -28,10 +28,10 @@ Time spent: 24 hours
 
 #### Optional
 
-- [ ] Panning from the edge should reveal the menu.
+- [x] Panning from the edge should reveal the menu.
   - [ ] If the menu is being revealed when the user lifts their finger, it should continue revealing.
-  - [ ] If the menu is being hidden when the user lifts their finger, it should continue hiding.
-- [ ] Tapping on compose should animate to reveal the compose view.
+  - [x] If the menu is being hidden when the user lifts their finger, it should continue hiding.
+- [x] Tapping on compose should animate to reveal the compose view.
 - [ ] Tapping the segmented control in the title should swipe views in from the left or right.
 - [ ] Shake to undo.
 
@@ -48,7 +48,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 TBD - will post Mon Jun 6th
-<img src='http://imgur.com/ffO0qIO' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/nettybrook/AB_HW_Week3_v1/blob/edgepan/AB_HW_Week3_Anim.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
